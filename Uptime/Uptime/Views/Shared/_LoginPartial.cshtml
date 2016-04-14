@@ -1,0 +1,12 @@
+﻿@model Uptime.Models.APIViewModels
+
+
+<ul class="nav navbar-nav navbar-right">
+    <li id="Searchbar">
+        @using (Html.BeginForm("AmazonSearch", "Amazon"))
+        {
+        @Html.TextBoxFor(m => m.sona) 
+        <input type="submit" value="Otsi amazonist!" />
+        }
+    </li>
+</ul>

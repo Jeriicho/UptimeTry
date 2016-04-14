@@ -1,0 +1,370 @@
+﻿@section headtag{
+<link rel="prerender" href="~/Amazon/AmazonSearch4">
+}
+@model Uptime.Models.APIViewModels
+
+@{
+    ViewBag.Title = "AmazonSearch3";
+}
+
+<h2>Otsingutulemused - lehekülg 3:</h2>
+<div class="dropdown">
+    <button onclick="vaheta()" class="dropbtn">Vali kurss</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#" id="EUR">Euro (EUR)</a>
+        <a href="#" id="GBP">Inglise Nael (GBP)</a>
+        <a href="#" id="USD">Dollar (USD)</a>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 0 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 0)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 0)</h3>
+    </div>
+    <p class="product-price">
+        @Model.innerPrice(Model.finalList, 1, 2, 0)</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 0)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 0 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 1 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 1)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 1)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 1)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 1)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 1 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 2 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 2)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 2)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 2)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 2)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 2 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 3 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 3)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 3)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 3)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 3)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 3 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 4 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 4)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 4)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 4)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 4)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 4 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 5 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 5)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 5)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 5)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 5)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 5 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 6 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 6)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 6)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 6)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 6)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 6 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 7 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 7)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 7)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 7)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 7)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 7 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 8 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 8)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 8)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 8)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 8)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 8 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 9 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 9)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 9)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 9)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 9)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 9 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 10 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 10)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 10)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 10)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 10)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 10 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 11 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 11)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 11)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 11)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 11)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 11 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+
+<div class="product-box">
+    <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 12 )">
+        <img src="@Model.mediumImgUrl(Model.finalList, 3, 2, 12)" width="120" height="160">
+    </a>
+    <div class="product-title">
+        <h3>@Model.innerTitle(Model.finalList, 0, 2, 12)</h3>
+    </div>
+    <p class="product-price"><span class="hind">
+    @Model.innerPrice(Model.finalList, 1, 2, 12)
+</span> <span class="valuuta">£</span><br>
+        <a target="_blank" style="color: #337ab7; text-decoration:none;" href="@Model.MoreOffersUrl(Model.finalList, 4, 2, 12)"> Rohkem pakkumisi </a>
+    </p>
+    <div>
+        <span class="a-button a-button-primary">
+            <a target="_blank" href="@Model.detailPageUrl(Model.finalList, 2, 2, 12 )" style="text-decoration:none">
+                <span class="a-button-inner">
+                    <img src="http://ddjax94hptnew.cloudfront.net/assets/images/Amazon-Favicon-64x64.png" class="a-icon a-icon-shop-now">
+                    <input class="a-button-input" type="submit" value="Add to cart">
+                    <span class="a-button-text">Osta!</span>
+                </span>
+            </a>
+        </span>
+    </div>
+</div>
+<div class="Lk-container">
+    <footer style="display:block">
+        <ul class="lehekulg">
+            <a href="~/Amazon/AmazonSearch1" class="Welk"><li class="Lk">1</li></a>
+            <a href="~/Amazon/AmazonSearch2" class="Welk"><li class="Lk">2</li></a>
+            <a href="#" class="Welk"><li class="Lk">-</li></a>
+            <a href="~/Amazon/AmazonSearch4" class="Welk"><li class="Lk">4</li></a>
+        </ul>
+    </footer>
+</div>
+<script>
+    function vaheta() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+</script>
