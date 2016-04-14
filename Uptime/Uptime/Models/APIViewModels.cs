@@ -18,6 +18,8 @@ namespace Uptime.Models
 {
     public class APIViewModels
     {
+        // sona = kasutaja input, finalList = kõiki tulemusi hoidev list
+        // finalList[0] - tiitlid, [1]- hinnad, [2] - rohkem pakkumisi URL, [3] - tootekirjelduse URL
         public string sona { get; set; }
         public List<List<List<string>>> finalList { get; set; }
 
@@ -25,7 +27,7 @@ namespace Uptime.Models
         public List<List<List<string>>> keyword(string sona) { 
             ItemSearch search = new ItemSearch();
             search.AssociateTag = "nagerat-21";
-            search.AWSAccessKeyId = "AKIAJV35OYPJ7P33GKFA";
+            search.AWSAccessKeyId = "Amazoni key ID";
             ItemSearchRequest req = new ItemSearchRequest();
             req.SearchIndex = "All";
             req.Keywords = sona;
@@ -53,7 +55,7 @@ namespace Uptime.Models
 
                 AWSECommerceServicePortTypeClient amzwc = new AWSECommerceServicePortTypeClient();
                 amzwc.ChannelFactory.Endpoint.EndpointBehaviors.Add(new AmazonSigningEndpointBehavior(
-                    "AKIAJV35OYPJ7P33GKFA", "xj/fI55Ti9rmEpa8HjuWNr4iln6dMGqhoQGpY/MZ"));
+                    "Amazoni key ID", "Amazon Secrey key"));
                 ItemSearchResponse resp = amzwc.ItemSearch(search);
                 foreach (Item item in resp.Items[0].Item)
                 {
@@ -123,7 +125,7 @@ namespace Uptime.Models
             tulemus.Add(moreOffersUrlPartial);
             return tulemus;
         }
-
+        //otsene kutse HTML vormist, asendab vastava indexi listist vasta pealkirjaga/hinnaga/urliga
         public string innerTitle(List<List<List<string>>> tiitlid, int parameetrid, int koikTiitlid, int tiitel)
         {
             if (tiitlid[parameetrid][koikTiitlid][tiitel] != "0")
@@ -185,6 +187,7 @@ namespace Uptime.Models
         }
 
     }
+    // kuna algne list on List, mis koosneb kõikidest vastetest, lõikan ma listi 13-kaupa lahti
     public static class ListExtensions
     {
         public static List<List<string>> ChunkBy(List<string> source, int chunkSize)

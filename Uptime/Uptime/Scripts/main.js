@@ -7,11 +7,11 @@ $(document).ready(function () {
         url: url,
         datatype: "json",
         async: false,
-    }).responseJSON;
+    }).responseJSON; // ootab AJAXi requesti ära ning asetab tagastatud JSONi muutujasse 'suhe'
 
 
     
-
+    //hinnamuutus
     $("#EUR").click(function () {
         if (document.getElementsByClassName("valuuta")[0].innerHTML === "£") {
             for (i in document.getElementsByClassName("valuuta")) {
